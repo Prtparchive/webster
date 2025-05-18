@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="container">
+    <h1>🌤 Weather App</h1>
+
+    <form class="input-group" onsubmit="getWeather(event)">
+      <input type="text" id="cityInput" placeholder="Enter city name" required>
+      <button type="submit">Search</button>
+    </form>
+
+    <div id="errorMessage" class="error-message"></div>
+    <div id="loading" class="loading-spinner"></div>
+
+    <div id="weatherCard" class="glass-card">
+      <h2 id="cityName"></h2>
+      <div id="weatherIcon"></div>
+      <p id="temp"></p>
+      <p id="desc"></p>
+      <p id="humidity"></p>
+      <p id="wind"></p>
+      <p id="feelsLike"></p>
+      <p id="aiSuggestion"></p>
+    </div>
+
+    <h3>5-Day Forecast</h3>
+    <div id="forecastContainer" class="forecast-grid"></div>
+    <!-- Add this before closing </div> of container -->
+    <div class="ai-chat-box glass-card">
+      <h3>🌩️ Weather Assistant</h3>
+      <div class="chat-input">
+        <input 
+          type="text" 
+          id="userQuestion" 
+          placeholder="Ask me anything (e.g. 'Do I need an umbrella?')"
+        >
+        <button onclick="window.handleUserQuestion()">Ask</button>
+      </div>
+      <div id="aiResponse" class="ai-response"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

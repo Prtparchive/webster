@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  padding: clamp(1rem, 3vmin, 2rem);
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #667eea, #764ba2);
+  color: white;
+  min-height: 100vh;
+}
+
+.container {
+  width: min(90%, 600px);
+  margin: 0 auto;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: clamp(1rem, 3vmin, 1.25rem);
+  border-radius: 15px;
+  margin: clamp(1rem, 3vmin, 1.25rem) 0;
+  backdrop-filter: blur(10px);
+}
+
+.input-group {
+  display: flex;
+  gap: clamp(0.5rem, 2vmin, 1rem);
+  margin: clamp(1rem, 3vmin, 1.25rem) 0;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: clamp(0.5rem, 2vmin, 1rem);
+  border: none;
+  border-radius: 8px;
+  font-size: clamp(0.875rem, 3vmin, 1rem);
+}
+
+button {
+  padding: clamp(0.5rem, 2vmin, 1rem) clamp(1rem, 4vmin, 1.25rem);
+  background: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: clamp(0.875rem, 3vmin, 1rem);
+}
+
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
+  gap: clamp(0.75rem, 2vmin, 1rem);
+}
+
+.forecast-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: clamp(0.75rem, 2vmin, 1rem);
+  border-radius: 12px;
+  text-align: center;
+}
+
+/* AI Chat Section */
+.ai-chat-box {
+  margin-top: clamp(1rem, 3vmin, 1.5rem);
+  padding: clamp(1rem, 3vmin, 1.5rem);
+}
+
+.chat-input {
+  display: flex;
+  gap: clamp(0.5rem, 2vmin, 1rem);
+  margin: clamp(1rem, 3vmin, 1.25rem) 0;
+}
+
+#userQuestion {
+  flex: 1;
+  padding: clamp(0.5rem, 2vmin, 1rem);
+  border-radius: 8px;
+  border: none;
+  font-size: clamp(0.875rem, 3vmin, 1rem);
+}
+
+.ai-response {
+  background: rgba(0, 0, 0, 0.1);
+  padding: clamp(1rem, 3vmin, 1.5rem);
+  border-radius: 8px;
+  min-height: clamp(60px, 10vmin, 80px);
+  margin-top: clamp(1rem, 3vmin, 1.5rem);
+  line-height: 1.5;
+}
+
+/* Keep existing animations and colors */
+.loading-spinner, .error-message, @keyframes spin {
+  /* ... (keep original styles unchanged) */
+}
